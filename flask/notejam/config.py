@@ -4,10 +4,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     DEBUG = False
     TESTING = False
-    SECRET_KEY = 'notejam-flask-secret-key'
-    WTF_CSRF_ENABLED = True
-    CSRF_SESSION_KEY = 'notejam-flask-secret-key'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'notejam.db')
+    WTF_CSRF_ENABLED = False
+    SQLALCHEMY_DATABASE_URI = 'mysql://notejamuser@notejam-mysql:FDFDd7837dsF@notejam-mysql.mysql.database.azure.com:3306/flask_db' + os.path.join(basedir, 'notejam.db')
 
 
 class ProductionConfig(Config):
